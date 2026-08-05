@@ -2,12 +2,20 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "chronicle-watch",
   "account_id": "d5dfb0c2e4ecc1eb2f486dceec58309c",
-  "main": "vinext/server/fetch-handler",
+  "main": "./worker/index.ts",
   "compatibility_date": "2026-08-05",
   "compatibility_flags": ["nodejs_compat"],
 
   "observability": {
     "enabled": true
+  },
+
+  "assets": {
+    "binding": "ASSETS"
+  },
+
+  "images": {
+    "binding": "IMAGES"
   },
 
   "d1_databases": [
