@@ -188,7 +188,6 @@ export function posterUrlFor(contentId: string) {
     ? `${POSTER_PROXY_BASE}?path=${encodeURIComponent(path.slice(1))}`
     : null;
 }
-}
 
 export function platformFor(contentId: string, availableUnits: number) {
   if (contentId === "fantastic-four-1994-unreleased") return "Yayımlanmadı";
