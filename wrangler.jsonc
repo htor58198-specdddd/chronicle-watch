@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "chronicle-watch",
+  "account_id": "d5dfb0c2e4ecc1eb2f486dceec58309c",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-08-05",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "observability": {
+    "enabled": true
+  },
+
+  "assets": {
+    "binding": "ASSETS"
+  },
+
+  "images": {
+    "binding": "IMAGES"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "chronicle-watch-db",
+      "database_id": "a2661d77-b23d-4a48-a9dd-8e1ecc71ac31"
+    }
+  ]
+}
