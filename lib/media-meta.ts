@@ -1,4 +1,4 @@
-const TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780";
+const POSTER_PROXY_BASE = "/api/poster";
 
 const posterPathById: Record<string, string> = {
   "eyes-wakanda-s1": "/yuOfb1MgnaGPa4guzV0n1IFYVGN.jpg",
@@ -183,7 +183,11 @@ const unavailableInTurkey = new Set([
 
 export function posterUrlFor(contentId: string) {
   const path = posterPathById[contentId];
-  return path ? `${TMDB_IMAGE_BASE}${path}` : null;
+
+  return path
+    ? `${POSTER_PROXY_BASE}?path=${encodeURIComponent(path.slice(1))}`
+    : null;
+}
 }
 
 export function platformFor(contentId: string, availableUnits: number) {
